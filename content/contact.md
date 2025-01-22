@@ -4,12 +4,13 @@ Feel free to reach out through any of these platforms:
 
 ## Social Media & Professional Networks
 
-- **GitHub:** [@pleabargain](https://github.com/pleabargain)
-- **LinkedIn:** [Dennis G Daniels](https://www.linkedin.com/in/dennisgdaniels)
+- **GitHub:** {{github}}
+- **LinkedIn:** {{linkedin}}
+- **Telegram:** {{telegram}}
 
 ## Direct Contact
 
-- **Email:** [dennisgdaniels@gmail.com](mailto:dennisgdaniels@gmail.com)
+- **Email:** {{email}}
 
 ## About Reaching Out
 

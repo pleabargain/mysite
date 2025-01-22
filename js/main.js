@@ -71,12 +71,26 @@ async function loadVideos() {
 async function loadContact() {
     const contactContainer = document.getElementById('contact-container');
     try {
-        const response = await fetch('content/contact.md');
-        const markdown = await response.text();
-        const html = marked.parse(markdown);
+        const [markdownResponse, configResponse] = await Promise.all([
+            fetch('content/contact.md'),
+            fetch('mydata.json')
+        ]);
+        
+        const markdown = await markdownResponse.text();
+        const config = await configResponse.json();
+        
+        // Replace placeholders with data from mydata.json
+        let updatedMarkdown = markdown
+            .replace('{{github}}', `[@pleabargain](${config.personalInfo.github})`)
+            .replace('{{linkedin}}', `[Dennis G Daniels](${config.personalInfo.linkedin})`)
+            .replace('{{telegram}}', `[Telegram](${config.personalInfo.telegram})`)
+            .replace('{{email}}', `[${config.personalInfo.email}](mailto:${config.personalInfo.email})`);
+        
+        const html = marked.parse(updatedMarkdown);
         contactContainer.innerHTML = `<div class="markdown-content">${html}</div>`;
     } catch (error) {
         contactContainer.innerHTML = '<p>Contact information unavailable.</p>';
+        console.error('Error loading contact information:', error);
     }
 }
 

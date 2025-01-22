@@ -1,0 +1,18 @@
+{
+    "personalInfo": {
+        "name": "Dennis G Daniels",
+        "email": "dennisgdaniels@gmail.com",
+        "github": "https://github.com/pleabargain",
+        "linkedin": "https://www.linkedin.com/in/dennisgdaniels"
+    },
+    "siteContent": {
+        "siteTitle": "Dennis G Daniels",
+        "footerText": "© 2025 Dennis G Daniels. All rights reserved."
+    },
+    "socialMedia": {
+        "youtube": {
+            "channelUrl": "https://www.youtube.com/@pleabargain",
+            "channelName": "Happy Computing with Dennis"
+        }
+    }
+}
